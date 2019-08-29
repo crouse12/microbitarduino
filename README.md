@@ -1,6 +1,6 @@
-# MicrobitNodemcu
+# MicrobitArduino
 
-Micro:Bit控制Nodemcu積木
+Micro:Bit控制Arduino積木
 
 ## License
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-microbitnodemcu=github:crouse12/microbitnodemcu
+microbitarduino=github:crouse12/microbitarduino
 ```
