@@ -1,20 +1,40 @@
 //% weight=0 color=#3CB371 icon="\uf0ad" block="Microbitnodemcu"
-namespace microbitnodemcu {
+namespace microbitarduino {
       export enum analogpin {
-        A0 = 0
+        A0 = 0,
+        A1 = 1,
+        A2 = 2,
+        A3 = 3,
+        A4 = 4,
+        A5 = 5
      }
      
       export enum digitalpin {
-        D0 = 16,
-        D1 = 5,
-        D2 = 4,
-        D3 = 0,
-        D4 = 2,
-        D5 = 14,
-        D6 = 12,
-        D7 = 13,
-        D8 = 15
+        D0 = 0,
+        D1 = 1,
+        D2 = 2,
+        D3 = 3,
+        D4 = 4,
+        D5 = 5,
+        D6 = 6,
+        D7 = 7,
+        D8 = 8,
+        D9 = 9,
+        D10 = 10,
+        D11 = 11,
+        D12 = 12,
+        D13 = 13
      }
+      
+      export enum digitalpin1 {
+        D3 = 3,
+        D5 = 5,
+        D6 = 6,
+        D9 = 9,
+        D10 = 10,
+        D11 = 11,
+     }
+      
       export enum type {
         INPUT = 2,
         OUTPUT = 1
@@ -39,7 +59,7 @@ namespace microbitnodemcu {
      
     //% blockId=setdigital2 block="set nodemcu digital pin  %pin | PWM value to %XY"
     //% weight=101
-    export function setdigital2(pin: digitalpin, XY: number):void {
+    export function setdigital2(pin: digitalpin1, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
  
@@ -59,9 +79,4 @@ namespace microbitnodemcu {
         let a=serial.readString()
         return a
     }   
-    //% blockId=thingspeak block="thingspeak  %key | field1 value %value1 | field2 value %value2 | field3 value %value3 | field4 value %value4"
-    //% weight=101 value=10  key=key
-    export function thingspeak(key: string,value1: string,value2: string,value3: string,value4: string) {
-        serial.writeString("t="+key+","+value1+","+value2+","+value3+","+value4+"\\n")
-    }
 }
