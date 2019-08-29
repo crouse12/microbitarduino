@@ -1,4 +1,4 @@
-//% weight=0 color=#3CB371 icon="\uf0ad" block="Microbitnodemcu"
+//% weight=0 color=#3CB371 icon="\uf0ad" block="Microbitarduino"
 namespace microbitarduino {
       export enum analogpin {
         A0 = 0,
@@ -44,26 +44,26 @@ namespace microbitarduino {
         LOW = 0
      }
 
-    //% blockId=setpinmode1 block="set nodemcu digital pin %pin | for %XY"
+    //% blockId=setpinmode1 block="set arduino digital pin %pin | for %XY"
     //% weight=102
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
      
-    //% blockId=setdigital1 block="set nodemcu digital pin  %pin | value to %XY"
+    //% blockId=setdigital1 block="set arduino digital pin  %pin | value to %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
-    //% blockId=setdigital2 block="set nodemcu digital pin  %pin | PWM value to %XY"
+    //% blockId=setdigital2 block="set arduino digital pin  %pin | PWM value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin1, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
  
-    //% blockId=setdigital3 block="read nodemcu digital pin  %pin value"
+    //% blockId=setdigital3 block="read arduino digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):string {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
@@ -71,7 +71,7 @@ namespace microbitarduino {
         let a=serial.readString()
         return a;
     }
-    //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
+    //% blockId=setdigital4 block="read arduino analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):string {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
