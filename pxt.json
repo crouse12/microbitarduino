@@ -1,7 +1,7 @@
 {
-    "name": "microbitnodemcu",
-    "version": "0.2",
-    "description": "這是micro:bit的nodemcu控制積木",
+    "name": "microbitarduino",
+    "version": "0.1",
+    "description": "這是micro:bit的arduino控制積木",
     "license": "MIT",
     "dependencies": {
         "core": "*"
@@ -9,7 +9,7 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh/microbitnodemcu-strings.json"
+        "_locales/zh/microbitarduino-strings.json"
     ],
     "public": true
 }
