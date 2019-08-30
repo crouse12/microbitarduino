@@ -1,4 +1,4 @@
-//% weight=0 color=#3CB371 icon="\uf0ad" block="microbitarduino"
+//% weight=0 color=#EC7505 icon="\uf0ad" block="microbitarduino"
 namespace microbitarduino {
       export enum analogpin {
         A0 = 0,
