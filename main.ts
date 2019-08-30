@@ -43,9 +43,23 @@ namespace microbitarduino {
         HIGH = 1,
         LOW = 0
      }
+      
+          //% block="Initialize Nodemcu |TX %tx|RX %rx|Baud rate %baudrate "
+    //% tx.defl=SerialPin.P0
+    //% rx.defl=SerialPin.P1
+    //% weight=101
+    //% blockExternalInputs = 1
+    export function setNodemcu(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
+        serial.redirect(
+            tx,
+            rx,
+            baudrate
+        )
+        basic.pause(100)
+    }
 
     //% blockId=setpinmode1 block="set arduino digital pin %pin | for %XY"
-    //% weight=102
+    //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
