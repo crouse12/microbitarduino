@@ -44,7 +44,7 @@ namespace microbitarduino {
         LOW = 0
      }
       
-          //% block="Initialize Nodemcu |TX %tx|RX %rx|Baud rate %baudrate "
+          //% block="Initialize Microbit |TX %tx|RX %rx|Baud rate %baudrate "
     //% tx.defl=SerialPin.P0
     //% rx.defl=SerialPin.P1
     //% weight=101
