@@ -49,7 +49,7 @@ namespace microbitarduino {
     //% rx.defl=SerialPin.P1
     //% weight=101
     //% blockExternalInputs = 1
-    export function setNodemcu(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
+    export function setMicrobit(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
         serial.redirect(
             tx,
             rx,
