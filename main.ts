@@ -93,6 +93,6 @@ namespace microbitarduino {
         basic.pause(10)
         let a=serial.readString()
         a=a.substr(0, a.length - 2)
-        return a
+        return parseFloat(a)
     }   
 }
