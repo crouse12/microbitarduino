@@ -84,7 +84,7 @@ namespace microbitarduino {
         basic.pause(10)
         let a=serial.readString()
         a=a.substr(0, a.length - 2)
-        return a;
+        return parseFloat(a)
     }
     //% blockId=setdigital4 block="read arduino analog pin  %pin value"
     //% weight=101 
